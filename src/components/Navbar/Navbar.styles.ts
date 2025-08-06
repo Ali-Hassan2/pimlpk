@@ -1,121 +1,75 @@
 import styled from "styled-components";
-const Nav = styled.div`
+import { GiHamburgerMenu } from "react-icons/gi";
+import { CiMail, CiHeadphones } from "react-icons/ci";
+
+export const Nav = styled.nav`
   width: 100%;
   height: 100px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #eeeeee;
-  padding: 0 0px;
-  box-shadow: 0px 0.3px 15px black;
-  position: fixed;
-  z-index: 999;
-
-  @media (max-width: 786px) {
-    flex-direction: column;
-    height: auto;
-    padding: 20px;
-  }
-`;
-
-const Left = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding-left: 60px;
-  align-items: center;
-
-  @media (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
-    justify-content: center;
-    padding-left: 0;
-    margin-bottom: 10px;
-  }
-`;
-
-const Right = styled.div`
-  width: 50%;
-  height: 100%;
-  display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 20px;
-  padding-left: 250px;
-  @media (max-width: 768px) {
-    width: 100%;
-    flex-direction: column;
-    gap: 10px;
-    padding: 20px 0;
-  }
-`;
-
-const Headingtwo = styled.div`
-  height: 100%;
-  font-weight: 600;
-  width: 20%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  font-family: "Mulish", sans-serif;
-  font-size: 1.5vw;
   background-color: #26252a;
-  padding: 0 10px;
+  padding: 0 2rem;
+  box-shadow: 0px 0.3px 15px rgba(0, 0, 0, 0.2);
+  position: relative;
+  z-index: 1000;
+
+  @media (max-width: 992px) {
+    padding: 0 1rem;
+  }
 
   @media (max-width: 768px) {
-    font-size: 5vw;
-    width: 100%;
+    height: 80px;
   }
 `;
 
-const Anchors = styled.div`
-  width: 80%;
+export const Left = styled.div`
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 60px;
+  gap: 2rem;
   height: 100%;
 
   @media (max-width: 768px) {
-    flex-wrap: wrap;
-    gap: 20px;
-    width: 100%;
-    justify-content: center;
-    margin-top: 10px;
+    gap: 1rem;
   }
 `;
 
-const Anchor = styled.div`
-  position: relative;
-  font-size: 0.9vw;
-  text-decoration: none;
-  font-weight: 500;
-  font-family: "Mulish", sans-serif;
-  cursor: pointer;
+export const Right = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 2rem;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0%;
-    height: 2px;
-    background-color: green;
-    transition: width 0.4s ease;
+  @media (max-width: 768px) {
+    &.desktop-right {
+      display: none;
+    }
   }
+`;
 
-  &:hover::after {
-    width: 100%;
+export const Headingtwo = styled.div`
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-family: "Mulish", sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  height: 100%;
+
+  @media (max-width: 992px) {
+    font-size: 1.3rem;
   }
 
   @media (max-width: 768px) {
-    font-size: 3vw;
+    font-size: 1.1rem;
   }
 `;
 
-const TravelIcon = styled.svg`
+export const Container = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+export const TravelIcon = styled.svg`
   width: 24px;
   height: 24px;
   margin-right: 10px;
@@ -134,71 +88,108 @@ const TravelIcon = styled.svg`
   }
 
   @media (max-width: 768px) {
-    width: 6vw;
-    height: 6vw;
+    width: 20px;
+    height: 200px;
   }
 `;
 
-const Container = styled.div`
+export const Anchors = styled.div`
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-right: 10px;
-
-  @media (max-width: 768px) {
-    padding-right: 0;
-  }
-`;
-
-const Info = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 60px;
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    gap: 10px;
-  }
-`;
-
-const Email = styled.span`
-  font-size: 0.9vw;
-  font-family: Mulish;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  @media (max-width: 768px) {
-    font-size: 3vw;
-  }
-`;
-
-const Phone = styled.span`
-  font-size: 0.9vw;
-  font-family: Mulish;
-  display: flex;
-  align-items: center;
-  gap: 5px;
-
-  @media (max-width: 768px) {
-    font-size: 3vw;
-  }
-`;
-
-const Button = styled.div`
-  background-color: #fd4a4a;
+  gap: 2rem;
   height: 100%;
-  width: 30%;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    gap: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    &.desktop-anchors {
+      display: none;
+    }
+  }
+`;
+
+export const Anchor = styled.a`
+  position: relative;
+  font-size: 1rem;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Mulish", sans-serif;
+  cursor: pointer;
+  color: white;
+  transition: color 0.3s ease;
+
+  &:hover {
+    color: #fd4a4a;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background-color: green;
+    transition: width 0.4s ease;
+  }
+
+  &:hover::after {
+    width: 100%;
+  }
+
+  @media (max-width: 992px) {
+    font-size: 0.9rem;
+  }
+`;
+
+export const Info = styled.div`
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+
+  @media (max-width: 992px) {
+    gap: 1rem;
+  }
+`;
+
+export const Email = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Mulish", sans-serif;
+  color: white;
+  font-size: 0.9rem;
+
+  @media (max-width: 992px) {
+    font-size: 0.8rem;
+  }
+`;
+
+export const Phone = styled.span`
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: "Mulish", sans-serif;
+  color: white;
+  font-size: 0.9rem;
+
+  @media (max-width: 992px) {
+    font-size: 0.8rem;
+  }
+`;
+
+export const Button = styled.button`
+  background-color: #fd4a4a;
   color: white;
   font-family: "Mulish", sans-serif;
   font-weight: 600;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1vw;
-  color: black;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
   white-space: nowrap;
   transition: background 0.3s ease;
 
@@ -206,23 +197,52 @@ const Button = styled.div`
     background-color: #e83e3e;
   }
 
-  @media (max-width: 768px) {
-    font-size: 3vw;
-    padding: 20px 50px;
+  @media (max-width: 992px) {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
   }
 `;
 
-export {
-  Nav,
-  Left,
-  Right,
-  Headingtwo,
-  Anchor,
-  TravelIcon,
-  Anchors,
-  Container,
-  Info,
-  Email,
-  Phone,
-  Button,
-};
+export const MenuIcon = styled(GiHamburgerMenu)`
+  display: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+
+  @media (max-width: 768px) {
+    display: block;
+  }
+`;
+
+export const MobileMenu = styled.div<{ isOpen: boolean }>`
+  display: flex;
+  flex-direction: column;
+  background-color: #26252a;
+  padding: 2rem;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 70%;
+  max-width: 300px;
+  z-index: 1001;
+  box-shadow: -2px 0 10px rgba(0, 0, 0, 0.2);
+  transform: ${({ isOpen }) => (isOpen ? "translateX(0)" : "translateX(100%)")};
+  transition: transform 0.3s ease-in-out;
+  gap: 1.5rem;
+
+  & > * {
+    color: white;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+`;
+
+export const CloseIcon = styled.div`
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+`;

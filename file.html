@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PIML Study Portal</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      body {
+        background-color: #f0f4fa;
+        color: #001f3f;
+        scroll-behavior: smooth;
+      }
+
+      header {
+        background: linear-gradient(rgba(0, 0, 128, 0.7), rgba(255, 0, 0, 0.6)),
+          url("https://images.unsplash.com/photo-1573164713712-03790aa1d1f3?auto=format&fit=crop&w=1600&q=80")
+            center/cover no-repeat;
+        padding: 4em 2em;
+        color: white;
+        text-align: center;
+      }
+
+      nav {
+        background: #001f3f;
+        padding: 1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1em;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: 500;
+        transition: 0.3s;
+      }
+
+      nav a:hover {
+        color: #ff4136;
+      }
+
+      section {
+        padding: 3em 2em;
+        margin-bottom: 1em;
+        border: 2px solid #001f3f;
+        border-radius: 10px;
+        transition: 0.5s;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-blend-mode: overlay;
+      }
+
+      section h2 {
+        color: #d62828;
+        border-bottom: 2px solid #001f3f;
+        padding-bottom: 0.5em;
+        margin-bottom: 1em;
+      }
+
+      .package,
+      .destination,
+      .blog-post,
+      .event,
+      .faq {
+        background: rgba(255, 255, 255, 0.95);
+        padding: 1.5em;
+        border-radius: 8px;
+        margin-bottom: 1.5em;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      }
+
+      .destination img,
+      .ielts-img,
+      .event-img,
+      .blog-img,
+      .contact-img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 1em;
+      }
+
+      .btn {
+        display: inline-block;
+        margin-top: 1em;
+        padding: 0.5em 1em;
+        background: #001f3f;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background 0.3s;
+      }
+
+      .btn:hover {
+        background: #d62828;
+      }
+
+      footer {
+        background: #001f3f;
+        color: white;
+        text-align: center;
+        padding: 2em;
+      }
+
+      .contact-form {
+        max-width: 600px;
+        margin: auto;
+        background: rgba(255, 255, 255, 0.95);
+        padding: 2em;
+        border-radius: 10px;
+        border: 2px solid #001f3f;
+      }
+
+      input,
+      textarea {
+        width: 100%;
+        padding: 0.8em;
+        margin-bottom: 1em;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+
+      input[type="submit"] {
+        background: #d62828;
+        color: white;
+        border: none;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background: #a91e1e;
+      }
+
+      .chat-button {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background-color: #ff4136;
+        color: white;
+        padding: 12px 18px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .chat-button:hover::after {
+        content: " Chat with us";
+        margin-left: 10px;
+      }
+
+      @media (max-width: 768px) {
+        nav {
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header data-aos="fade-down">
+      <h1>Welcome to PIML Education & Immigration Consultancy</h1>
+      <p>
+        Your trusted partner for UK, USA, Australia, Cyprus & Hungary Study
+        Visas
+      </p>
+    </header>
+
+    <nav>
+      <a href="#destinations">Destinations</a>
+      <a href="#ielts">IELTS Packages</a>
+      <a href="#events">Events</a>
+      <a href="#blog">Blog</a>
+      <a href="#faqs">FAQs</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <section
+      id="destinations"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 128, 0.4),
+            rgba(255, 0, 0, 0.4)
+          ),
+          url('https://images.unsplash.com/photo-1607200188839-2c4c7c3d6c1a?auto=format&fit=crop&w=1600&q=80');
+      "
+      data-aos="fade-up"
+    >
+      <h2>Study Destinations</h2>
+      <div class="destination">
+        <img
+          src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80"
+          alt="USA"
+        />
+        <p>
+          <strong>USA:</strong> Top universities like MIT, Stanford, and Harvard
+          with innovation-focused education.
+        </p>
+        <a href="#contact" class="btn">Apply Now</a>
+      </div>
+      <div class="destination">
+        <img
+          src="https://images.unsplash.com/photo-1551809232-7b94b3f849c9?auto=format&fit=crop&w=800&q=80"
+          alt="UK"
+        />
+        <p>
+          <strong>UK:</strong> Elite education at Oxford and Cambridge with
+          post-study work opportunities.
+        </p>
+        <a href="#contact" class="btn">Apply Now</a>
+      </div>
+    </section>
+
+    <section
+      id="ielts"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 128, 0.4),
+            rgba(255, 0, 0, 0.4)
+          ),
+          url('https://images.unsplash.com/photo-1571260899304-425eee4c7efc?auto=format&fit=crop&w=1600&q=80');
+      "
+      data-aos="fade-right"
+    >
+      <h2>IELTS Preparation Packages</h2>
+      <img
+        class="ielts-img"
+        src="https://images.unsplash.com/photo-1600195077073-805d11138ac4?auto=format&fit=crop&w=800&q=80"
+        alt="IELTS"
+      />
+      <div class="package">
+        <strong>Platinum Plus:</strong> Rs. 30,000 – 2 Weeks Intensive + Website
+        Access
+      </div>
+      <div class="package">
+        <strong>Platinum:</strong> Rs. 25,000 – 3 Weeks + Daily Practice
+      </div>
+      <div class="package">
+        <strong>Silver:</strong> Rs. 20,000/Month – 2 Months Regular
+      </div>
+      <div class="package">
+        <strong>Bronze:</strong> Rs. 20,000/Month – 3 Months Foundation
+      </div>
+    </section>
+
+    <section
+      id="events"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 128, 0.4),
+            rgba(255, 0, 0, 0.4)
+          ),
+          url('https://images.unsplash.com/photo-1596496181020-b1833c7e1864?auto=format&fit=crop&w=1600&q=80');
+      "
+      data-aos="zoom-in"
+    >
+      <h2>Our Events</h2>
+      <div class="event">
+        <p>
+          <strong>📍 August 2025:</strong> Study Abroad Mega Seminar with reps
+          from UK, USA & Australia.
+        </p>
+        <p>
+          <strong>🎤 Spoken English Bootcamp:</strong> 2-week confidence and
+          fluency course.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="blog"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 128, 0.4),
+            rgba(255, 0, 0, 0.4)
+          ),
+          url('https://images.unsplash.com/photo-1579124135302-d3c9d5c95e57?auto=format&fit=crop&w=1600&q=80');
+      "
+      data-aos="fade-left"
+    >
+      <h2>Latest Blog Posts</h2>
+      <div class="blog-post">
+        <p>
+          <strong>📘 Top 5 Countries in 2025:</strong> Compare USA, UK,
+          Australia and Europe.
+        </p>
+      </div>
+      <div class="blog-post">
+        <p>
+          <strong>🧠 IELTS Strategies:</strong> Learn expert tips to master all
+          4 modules.
+        </p>
+      </div>
+    </section>
+
+    <section
+      id="faqs"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 128, 0.4),
+            rgba(255, 0, 0, 0.4)
+          ),
+          url('https://images.unsplash.com/photo-1573164574230-8f1f5dd9c3b4?auto=format&fit=crop&w=1600&q=80');
+      "
+      data-aos="flip-up"
+    >
+      <h2>FAQs</h2>
+      <div class="faq">
+        <strong>Q:</strong> How long does the visa process take?<br /><strong
+          >A:</strong
+        >
+        4–6 weeks depending on country and documents.
+      </div>
+      <div class="faq">
+        <strong>Q:</strong> Do you help with admissions?<br /><strong
+          >A:</strong
+        >
+        Yes, complete guidance from start to finish.
+      </div>
+    </section>
+
+    <section
+      id="contact"
+      style="
+        background-image: linear-gradient(
+            rgba(0, 0, 128, 0.4),
+            rgba(255, 0, 0, 0.4)
+          ),
+          url('https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1600&q=80');
+      "
+      data-aos="fade-up"
+    >
+      <h2>Contact Us</h2>
+      <div class="contact-form">
+        <form id="contactForm" method="POST" action="contact.php">
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            required
+          ></textarea>
+          <input type="submit" value="Send Message" />
+        </form>
+        <p><strong>Phone:</strong> 03000239023, 03000239013</p>
+        <p>
+          <strong>Address:</strong> PIML Education Consultants, 2nd Floor,
+          Center Point Plaza, GTS Chowk, Gujrat
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      <p>&copy; 2025 PIML Education Consultancy. All rights reserved.</p>
+    </footer>
+
+    <div class="chat-button" title="Chat with us">💬</div>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
