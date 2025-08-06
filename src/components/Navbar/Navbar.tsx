@@ -66,11 +66,7 @@ const Navbar = ({
         "-=0.5"
       );
     if (buttonRef.current)
-      tl.from(
-        buttonRef.current,
-        { x: 200, opacity: 0, duration: 1.2 },
-        "-=0.4"
-      );
+      tl.from(buttonRef.current, { x: 200, opacity: 0 }, "-=0.4");
   }, []);
 
   return (
