@@ -66,10 +66,9 @@ const RightSection = styled.div`
   height: 100%;
   border: 2px solid brown;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: column;
-  display: grid;
-  gap: -200px;
-  place-items: center;
 `;
 
 const RightUpper = styled.div`
@@ -95,7 +94,7 @@ const MainHeading = styled.div`
 
 const RightLower = styled.div`
   width: 80%;
-  border: 1px solid blue;
+  border: 5px solid blue;
   height: 50%;
 `;
 
