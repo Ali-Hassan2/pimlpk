@@ -17,6 +17,8 @@ const FooterUpper = styled.div`
   background-color: red;
 `;
 
+const Left = styled.div`
 
+`
 
 export { FooterSection, FooterUpper };
