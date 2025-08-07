@@ -12,7 +12,7 @@ const Footer = () => {
     <FooterSection>
       <FooterUpper>
         <Left>This is the left section</Left>
-        <Right></Right>
+        <Right>THis is the right section</Right>
       </FooterUpper>
 
       <FooterMiddle></FooterMiddle>
