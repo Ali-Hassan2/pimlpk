@@ -20,8 +20,6 @@ const FooterUpper = styled.div`
 const Left = styled.div``;
 const Right = styled.div``;
 
-const FooterMiddle = styled.div`
-    
-`
+const FooterMiddle = styled.div``;
 
-export { FooterSection, FooterUpper };
+export { FooterSection, FooterUpper, Left, Right, FooterMiddle };
