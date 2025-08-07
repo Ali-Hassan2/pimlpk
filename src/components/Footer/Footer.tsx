@@ -7,6 +7,8 @@ const Footer = () => {
         <Left></Left>
         <Right></Right>
       </FooterUpper>
+
+      <FooterMiddle></FooterMiddle>
     </FooterSection>
   );
 };
