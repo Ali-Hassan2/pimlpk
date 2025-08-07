@@ -6,6 +6,8 @@ import {
   Right,
   FooterMiddle,
   FooterLower,
+  MiddleLeft,
+  MiddleRight,
 } from "./Footer.styles";
 const Footer = () => {
   return (
