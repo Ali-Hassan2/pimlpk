@@ -17,7 +17,7 @@ function App() {
 
   return (
     <div>
-      <RouterProvider
+      <RouterProvider router={}
     </div>
   )
 }
