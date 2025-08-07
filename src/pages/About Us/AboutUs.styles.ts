@@ -8,4 +8,4 @@ const AboutUs.styles = () => {
   )
 }
 
-export default AboutUs.styles
+export  AboutUs.styles
