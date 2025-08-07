@@ -5,6 +5,7 @@ import {
   Left,
   Right,
   FooterMiddle,
+  FooterLower,
 } from "./Footer.styles";
 const Footer = () => {
   return (
