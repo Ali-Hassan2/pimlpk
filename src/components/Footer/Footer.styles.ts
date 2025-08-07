@@ -3,6 +3,7 @@ import styled from "styled-components";
 const FooterSection = styled.div`
   height: 100vh;
   width: 100vw;
+  border: 10px solid blue;
 `;
 
 const FooterUpper = styled.div`
