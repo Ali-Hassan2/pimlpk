@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Home } from "./pages";
-import { CreateBrowserRouter } from "react-router-dom";
+import { CreateBrowserRouter, RouterProvider } from "react-router-dom";
 
 function App() {
   return <Home />;
