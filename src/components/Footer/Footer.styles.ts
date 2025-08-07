@@ -5,6 +5,8 @@ const FooterSection = styled.div`
   width: 100vw;
   border: 10px solid blue;
   overflow-x: hidden;
+  display: flex;
+  
 `;
 
 const FooterUpper = styled.div`
