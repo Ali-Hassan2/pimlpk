@@ -25,7 +25,7 @@ const FooterLower = styled.div``;
 
 const MiddleLeft = styled.div``;
 
-const MdiileRight = styled.div``;
+const MiddleRight = styled.div``;
 
 export {
   FooterSection,
