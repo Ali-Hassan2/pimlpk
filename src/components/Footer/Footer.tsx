@@ -4,7 +4,12 @@ const Footer = () => {
   return (
     <FooterSection>
       <FooterUpper>
-        <Left></Left>
+        <Left>
+
+        </Left>
+        <Right>
+
+        </Right>
       </FooterUpper>
     </FooterSection>
   );
