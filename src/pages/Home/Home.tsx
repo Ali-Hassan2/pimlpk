@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Banner, HomeTwo, Home3 } from "../../components";
+import { Navbar, Banner, HomeTwo, Home3, Footer } from "../../components";
 import { PageWrapper } from "./Home.style";
 
 const Home = () => {
@@ -22,6 +22,7 @@ const Home = () => {
       </PageWrapper>
       <HomeTwo />
       <Home3 />
+      <Footer />
     </>
   );
 };
