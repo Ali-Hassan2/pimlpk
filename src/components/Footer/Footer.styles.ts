@@ -18,7 +18,7 @@ const FooterUpper = styled.div`
 `;
 
 const Left = styled.div`
-  border: 1px solid red
+  border: 1px solid red;
 `;
 const Right = styled.div``;
 
