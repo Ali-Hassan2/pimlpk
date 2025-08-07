@@ -13,6 +13,11 @@ const router = createBrowserRouter([
   { path: "*", element: <NotFound /> },
 ]);
 
-function App() {}
+function App() {
+
+  return (
+    
+  )
+}
 
 export default App;
