@@ -2,7 +2,6 @@ import styled from "styled-components";
 const HomeTwoSection = styled.div`
   height: 100vh;
   width: 100vw;
-  border: 3px solid yellow;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -20,7 +19,6 @@ const LeftSection = styled.div`
   display: grid;
   place-items: center;
   position: relative;
-  
 
   @media (max-width: 1024px) {
     width: 100%;
