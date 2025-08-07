@@ -87,7 +87,6 @@ const Home3 = () => {
       text: "STUDENT SERVICES",
     },
   ];
-
   return (
     <HomeThreeSection>
       <UpperBound>
