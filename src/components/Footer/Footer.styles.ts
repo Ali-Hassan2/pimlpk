@@ -7,7 +7,7 @@ const FooterSection = styled.div`
   overflow-x: hidden;
   display: flex;
   justify-content: center;
-  
+  align-items: center;
 `;
 
 const FooterUpper = styled.div`
