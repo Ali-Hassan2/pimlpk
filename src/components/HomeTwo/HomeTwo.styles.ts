@@ -7,20 +7,33 @@ const HomeTwoSection = styled.div`
   justify-content: center;
   align-items: center;
   overflow-x: hidden;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 const LeftSection = styled.div`
   width: 50%;
   height: 100%;
-  border: 2px solid brown;
   display: grid;
   place-items: center;
   position: relative;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const ImageContainer = styled.div`
   height: 800px;
   width: 900px;
+  @media (max-width: 768px) {
+    width: 100%;
+    height: auto;
+  }
 `;
 
 const Image = styled.img`
@@ -33,7 +46,6 @@ const Boxi = styled.div`
   position: absolute;
   height: 240px;
   width: 240px;
-  border: 1px solid red;
   top: 450px;
   right: 100px;
   background-color: #fd4a4a;
@@ -41,6 +53,13 @@ const Boxi = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  @media (max-width: 768px) {
+    height: 180px;
+    width: 180px;
+    top: auto;
+    bottom: 10%;
+    right: 10%;
+  }
 `;
 
 const Upper = styled.div`
@@ -59,21 +78,28 @@ const Main = styled.div`
   font-family: Mulish;
   padding-top: 30px;
   padding-left: 10px;
+
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
 
 const RightSection = styled.div`
   width: 50%;
   height: 100%;
-  border: 2px solid brown;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media (max-width: 1024px) {
+    width: 100%;
+    height: auto;
+    padding: 40px 0;
+  }
 `;
 
 const RightUpper = styled.div`
   width: 80%;
-  border: 1px solid blue;
   display: flex;
   justify-content: start;
   align-items: start;
@@ -81,21 +107,94 @@ const RightUpper = styled.div`
 `;
 
 const UpperHeading = styled.div`
-  border: 1px solid black;
   font-size: 1.5vw;
   font-family: Mulish;
+
+  @media (max-width: 768px) {
+    font-size: 4vw;
+  }
 `;
 
 const MainHeading = styled.div`
-  border: 1px solid red;
   font-size: 4vw;
   font-family: Mulish;
 `;
 
 const RightLower = styled.div`
   width: 80%;
-  border: 5px solid blue;
   height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    height: auto;
+    width: 100%;
+    padding: 20px 0;
+  }
+`;
+
+const LeftPara = styled.div`
+  width: 600px;
+  height: 100%;
+  font-family: Mulish;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 10px;
+  }
+`;
+
+const RightPara = styled.div`
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Mulish;
+  width: 100%;
+  padding: 10px;
+
+  @media (max-width: 1024px) {
+    width: 100%;
+    padding: 10px;
+  }
+`;
+
+const Span = styled.span`
+  margin-top: 35px;
+
+  @media (max-width: 1024px) {
+    text-align: justify;
+    width: 100%;
+  }
+`;
+
+const Buttonn = styled.div`
+  width: 60%;
+  height: 50px;
+  border: 1px solid #fd4a4a;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Mulish;
+  cursor: pointer;
+
+  &:hover {
+    color: white;
+    background-color: #fd4a4a;
+  }
+
+  @media (max-width: 768px) {
+    width: 60%;
+    height: 50px;
+  }
 `;
 
 export {
@@ -111,4 +210,9 @@ export {
   UpperHeading,
   MainHeading,
   RightLower,
+  LeftPara,
+  RightPara,
+  Buttonn,
+  UpperPara,
+  Span,
 };
