@@ -3,7 +3,9 @@ import { FooterSection, FooterUpper } from "./Footer.styles";
 const Footer = () => {
   return (
     <FooterSection>
-      <FooterUpper></FooterUpper>
+      <FooterUpper>
+        <Left></Left>
+      </FooterUpper>
     </FooterSection>
   );
 };
