@@ -17,7 +17,9 @@ const FooterUpper = styled.div`
   background-color: red;
 `;
 
-const Left = styled.div``;
+const Left = styled.div`
+  border: 1px solid red
+`;
 const Right = styled.div``;
 
 const FooterMiddle = styled.div``;
@@ -36,5 +38,4 @@ export {
   MiddleLeft,
   MiddleRight,
   FooterLower,
-  
 };
