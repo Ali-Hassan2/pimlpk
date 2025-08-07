@@ -15,6 +15,8 @@ const Footer = () => {
       </FooterUpper>
 
       <FooterMiddle></FooterMiddle>
+
+      <FooterLower></FooterLower>
     </FooterSection>
   );
 };
