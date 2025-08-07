@@ -4,4 +4,4 @@ const ContactUs = () => {
   return <div></div>;
 };
 
-export  ContactUs;
+export { ContactUs };
