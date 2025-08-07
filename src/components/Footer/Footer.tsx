@@ -11,7 +11,7 @@ const Footer = () => {
   return (
     <FooterSection>
       <FooterUpper>
-        <Left></Left>
+        <Left>This is the left section</Left>
         <Right></Right>
       </FooterUpper>
 
