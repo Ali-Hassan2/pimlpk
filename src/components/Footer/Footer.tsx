@@ -18,7 +18,7 @@ const Footer = () => {
       <FooterMiddle>
         THis si the middle section
         <MiddleLeft></MiddleLeft>
-        <Right></Right>
+        <MiddleRight></MiddleRight>
       </FooterMiddle>
 
       <FooterLower>THis is the lower section.</FooterLower>
