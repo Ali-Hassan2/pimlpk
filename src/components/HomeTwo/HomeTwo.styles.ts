@@ -20,6 +20,7 @@ const LeftSection = styled.div`
   display: grid;
   place-items: center;
   position: relative;
+  
 
   @media (max-width: 1024px) {
     width: 100%;

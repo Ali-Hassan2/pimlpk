@@ -54,6 +54,7 @@ const Left = styled.div`
   height: 100%;
   width: 50%;
   z-index: 2;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -72,6 +73,7 @@ const Upper = styled.div`
   display: flex;
   align-items: end;
   padding-left: 80px;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     justify-content: center;
