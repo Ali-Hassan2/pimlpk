@@ -4,4 +4,4 @@ const Services = () => {
   return <div></div>;
 };
 
-export default Services;
+export { Services };
