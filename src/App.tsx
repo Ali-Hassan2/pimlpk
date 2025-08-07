@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Home, Services } from "./pages";
+import { Home, NotFound, Services } from "./pages";
 import {
   createBrowserRouter,
   CreateBrowserRouter,
@@ -10,7 +10,7 @@ import {
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },
   { path: "/services", element: <Services /> },
-  {path:'*',element:}
+  { path: "*", element: <NotFound /> },
 ]);
 
 function App() {}
