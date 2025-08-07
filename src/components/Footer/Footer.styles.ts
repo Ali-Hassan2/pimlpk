@@ -13,6 +13,7 @@ const FooterSection = styled.div`
 const FooterUpper = styled.div`
   width: 50%;
   height: 200px;
+  border: 2px solid red;
 `;
 
 export { FooterSection, FooterUpper };
