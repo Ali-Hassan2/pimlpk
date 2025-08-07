@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { Home, NotFound, Services, AboutUs } from "./pages";
+import { Home, NotFound, Services, AboutUs, ContactUs } from "./pages";
 import {
   createBrowserRouter,
   CreateBrowserRouter,
