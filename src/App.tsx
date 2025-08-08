@@ -1,11 +1,7 @@
 import { useState } from "react";
 import "./App.css";
 import { Home, NotFound, Services, AboutUs, ContactUs } from "./pages";
-import {
-  createBrowserRouter,
-  CreateBrowserRouter,
-  RouterProvider,
-} from "react-router-dom";
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   { path: "/", element: <Home /> },

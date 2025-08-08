@@ -6,8 +6,7 @@ const FooterSection = styled.div`
   border: 10px solid blue;
   overflow-x: hidden;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
 `;
 
 const FooterUpper = styled.div`
