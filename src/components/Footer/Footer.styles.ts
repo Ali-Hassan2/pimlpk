@@ -2,25 +2,16 @@ import styled from "styled-components";
 
 const FooterSection = styled.div`
   height: 100vh;
+  background-color: #25252a;
   width: 100vw;
-  border: 10px solid blue;
+  border: 10px solid green;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: relative;
+  z-index: 0;
 `;
-
-const FooterUpper = styled.div`
-  width: 70%;
-  height: 200px;
-  border: 2px solid red;
-  background-color: red;
-`;
-
-const Left = styled.div`
-  border: 1px solid red;
-`;
-const Right = styled.div``;
 
 const FooterMiddle = styled.div`
   width: 100%;
@@ -37,13 +28,4 @@ const MiddleLeft = styled.div``;
 
 const MiddleRight = styled.div``;
 
-export {
-  FooterSection,
-  FooterUpper,
-  Left,
-  Right,
-  FooterMiddle,
-  MiddleLeft,
-  MiddleRight,
-  FooterLower,
-};
+export { FooterSection, FooterMiddle, MiddleLeft, MiddleRight, FooterLower };

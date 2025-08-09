@@ -4,7 +4,8 @@ const HomeThreeSection = styled.div`
   height: 100vh;
   width: 100vw;
   padding-top: 60px;
-
+  position: relative;
+  z-index: 2;
   @media (max-width: 768px) {
     padding-top: 40px;
     height: auto;
@@ -129,14 +130,17 @@ export const BoxesWrapper = styled.div`
 const LastSection = styled.div`
   height: 100px;
   display: flex;
-
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding-bottom: 70px;
   font-family: Mulish;
   color: red;
   cursor: pointer;
   font-size: 1rem;
   text-align: center;
+  position: relative;
+  z-index: 0;
   padding-top: 40px;
   @media (max-width: 768px) {
     height: auto;
@@ -153,7 +157,8 @@ const LastSection = styled.div`
 
 const Report = styled.div`
   transition: color 0.3s ease;
-
+  position: relative;
+  z-index: 0;
   &:hover {
     color: #fd4a4a;
   }
@@ -162,6 +167,17 @@ const Report = styled.div`
     text-align: center;
   }
 `;
+
+const LastOne = styled.div`
+  width: 70%;
+  height: 200px;
+  background-color: #fd4a4a;
+  position: absolute;
+  left: 50%;
+  bottom: -155px;
+  transform: translate(-50%);
+`;
+
 export {
   HomeThreeSection,
   UpperBound,
@@ -171,4 +187,5 @@ export {
   MainHeading,
   LastSection,
   Report,
+  LastOne,
 };
