@@ -1,4 +1,5 @@
-import { toast, ToastOptions } from "react-toastify";
+import { toast } from "react-toastify";
+import type { ToastOptions } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const defaultOption: ToastOptions = {
@@ -15,18 +16,25 @@ const showToast = (
   message: string,
   type: "success" | "error" | "info" | "warning" = "info"
 ) => {
+  const customStyle = {
+    backgroundColor: "#333",
+    color: "#ff4d4d",
+    fontWeight: "bold",
+    fontSize: "14px",
+    borderRadius: "6px",
+  };
   switch (type) {
     case "success":
-      toast.success(message, defaultOption);
+      toast.success(message, { ...defaultOption, style: customStyle });
       break;
     case "error":
-      toast.error(message, defaultOption);
+      toast.error(message, { ...defaultOption, style: customStyle });
       break;
     case "warning":
-      toast.warning(message, defaultOption);
+      toast.warning(message, { ...defaultOption, style: customStyle });
       break;
     default:
-      toast.info(message, defaultOption);
+      toast.info(message, { ...defaultOption, style: customStyle });
   }
 };
 

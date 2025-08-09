@@ -45,7 +45,7 @@ const RightContact = styled.div`
   border: 1px solid brown;
 `;
 
-const Form = styled.div`
+const Form = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -11,6 +11,7 @@ import {
   HeadingTwo,
   Button,
 } from "./ContactUs.styles";
+import { showToast } from "../../Utils";
 const NavbarProps = {
   title: "pimlpk",
   spant: "Travels",
@@ -36,6 +37,7 @@ const ContactUs = () => {
     city: "",
     message: "",
   });
+  const [error, seterror] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -48,7 +50,49 @@ const ContactUs = () => {
     }));
   };
 
-  const handlesubmit = (e: React.FormEvent) => {};
+  const handlesubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formdata.name || !formdata.email || !formdata.message) {
+      showToast("Please fill in all required fields.", "warning");
+      return;
+    }
+
+    const controller = new AbortController();
+    const signal = controller.signal;
+    const timer = 4000;
+    const timeout = setTimeout(() => controller.abort(), timer);
+
+    try {
+      const baseUrl = "https://formspree.io/f/myzplkpw";
+      const response = await fetch(baseUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        signal,
+        body: JSON.stringify(formdata),
+      });
+
+      clearTimeout(timeout);
+
+      if (!response.ok) {
+        const error_Data = await response.json().catch(() => null);
+        showToast("Cannot Send Message.", "error");
+        throw new Error(error_Data?.message || "Something went wrong.");
+      }
+
+      showToast("Message Sent Successfully.", "success");
+      setformdata({ name: "", email: "", city: "", message: "" });
+    } catch (error: any) {
+      if (error.name === "AbortError") {
+        showToast("Request Timeout.", "error");
+      } else {
+        showToast(error?.message || "Unexpected Error.", "error");
+      }
+    }
+  };
 
   return (
     <>
@@ -65,27 +109,27 @@ const ContactUs = () => {
                 placeholder="Your Name"
                 name="name"
                 value={formdata.name}
-                onChange={}
+                onChange={handleChange}
               />
               <Input
                 type="text"
                 placeholder="Your Email"
                 name="email"
                 value={formdata.email}
-                onChange={}
+                onChange={handleChange}
               />
               <Input
                 type="text"
                 placeholder="Your City"
                 name="city"
                 value={formdata.city}
-                onChange={}
+                onChange={handleChange}
               />
               <TextArea
                 name="message"
                 placeholder="Your message here"
                 value={formdata.message}
-                onChange={}
+                onChange={handleChange}
               ></TextArea>
               <Button type="submit">Submit Message</Button>
             </Form>
