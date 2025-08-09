@@ -37,7 +37,6 @@ const ContactUs = () => {
     city: "",
     message: "",
   });
-  const [error, seterror] = useState<string>("");
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
