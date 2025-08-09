@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { CiMail, CiHeadphones } from "react-icons/ci";
+import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
   width: 100%;
@@ -110,7 +111,7 @@ export const Anchors = styled.div`
   }
 `;
 
-export const Anchor = styled.a`
+export const Anchor = styled(Link)`
   position: relative;
   font-size: 1rem;
   text-decoration: none;

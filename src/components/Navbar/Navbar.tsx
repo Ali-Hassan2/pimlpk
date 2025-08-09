@@ -92,12 +92,18 @@ const Navbar = ({
           </Headingtwo>
 
           <Anchors ref={anchorsRef} className="desktop-anchors">
-            <Anchor>
+            <Anchor to="/" onClick={() => setIsOpen(false)}>
               <span style={{ color: "red", fontWeight: 700 }}>{An1}</span>
             </Anchor>
-            <Anchor>{An2}</Anchor>
-            <Anchor>{An3}</Anchor>
-            <Anchor>{An4}</Anchor>
+            <Anchor to="/services" onClick={() => setIsOpen(false)}>
+              {An2}
+            </Anchor>
+            <Anchor to="/aboutus" onClick={() => setIsOpen(false)}>
+              {An3}
+            </Anchor>
+            <Anchor to="/contactus" onClick={() => setIsOpen(false)}>
+              {An4}
+            </Anchor>
           </Anchors>
         </Left>
 
@@ -120,19 +126,19 @@ const Navbar = ({
 
       <MobileMenu isOpen={isOpen}>
         <CloseIcon onClick={() => setIsOpen(false)}>×</CloseIcon>
-        <Anchor onClick={() => setIsOpen(false)}>
+        <Anchor to="/" onClick={() => setIsOpen(false)}>
           <span style={{ color: "red", fontWeight: 700 }}>{An1}</span>
         </Anchor>
-        <Anchor onClick={() => setIsOpen(false)}>
-          {" "}
-          <Link to="/services">{An2}</Link>
+        <Anchor to="/services" onClick={() => setIsOpen(false)}>
+          {An2}
         </Anchor>
-        <Anchor onClick={() => setIsOpen(false)}>
-          <Link>{An3}</Link>
+        <Anchor to="/aboutus" onClick={() => setIsOpen(false)}>
+          {An3}
         </Anchor>
-        <Anchor onClick={() => setIsOpen(false)}>
-          <Link>{An4}</Link>
+        <Anchor to="/contactus" onClick={() => setIsOpen(false)}>
+          {An4}
         </Anchor>
+
         <Email>
           <CiMail />
           {email}
