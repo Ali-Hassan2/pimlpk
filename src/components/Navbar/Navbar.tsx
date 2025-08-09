@@ -1,6 +1,7 @@
 import React, { useRef, useState } from "react";
 import { CiMail, CiHeadphones } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {
@@ -122,9 +123,16 @@ const Navbar = ({
         <Anchor onClick={() => setIsOpen(false)}>
           <span style={{ color: "red", fontWeight: 700 }}>{An1}</span>
         </Anchor>
-        <Anchor onClick={() => setIsOpen(false)}>{An2}</Anchor>
-        <Anchor onClick={() => setIsOpen(false)}>{An3}</Anchor>
-        <Anchor onClick={() => setIsOpen(false)}>{An4}</Anchor>
+        <Anchor onClick={() => setIsOpen(false)}>
+          {" "}
+          <Link to="/services">{An2}</Link>
+        </Anchor>
+        <Anchor onClick={() => setIsOpen(false)}>
+          <Link>{An3}</Link>
+        </Anchor>
+        <Anchor onClick={() => setIsOpen(false)}>
+          <Link>{An4}</Link>
+        </Anchor>
         <Email>
           <CiMail />
           {email}
