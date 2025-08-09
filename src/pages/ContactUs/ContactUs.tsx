@@ -37,13 +37,9 @@ const ContactUs = () => {
     message: "",
   });
 
-const handleChange = (e)=>{
+  const handleChange = (e) => {};
 
-}
-
-const handlesubmit = (e)=>{
-  
-}
+  const handlesubmit = (e) => {};
 
   return (
     <>
@@ -54,7 +50,7 @@ const handlesubmit = (e)=>{
         </HeadingTwo>
         <FormSection>
           <LeftContact>
-            <Form action="">
+            <Form action="" onSubmit={handlesubmit}>
               <Input
                 type="text"
                 placeholder="Your Name"
