@@ -38,6 +38,10 @@ const ContactUs = () => {
   });
 
 const handleChange = (e)=>{
+
+}
+
+const handlesubmit = (e)=>{
   
 }
 
