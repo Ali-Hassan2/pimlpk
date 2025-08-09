@@ -1,6 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import { Navbar } from "../../components";
-
+import {
+  MainContentSection,
+  FormSection,
+  LeftContact,
+  RightContact,
+  Form,
+  Input,
+  TextArea,
+  HeadingTwo,
+  Button,
+} from "./ContactUs.styles";
 const NavbarProps = {
   title: "pimlpk",
   spant: "Travels",
@@ -29,6 +39,46 @@ const ContactUs = () => {
   return (
     <>
       <Navbar {...NavbarProps} />
+      <MainContentSection>
+        <HeadingTwo>
+          <span style={{ color: "#fd4a4a" }}>Contact</span> Us
+        </HeadingTwo>
+        <FormSection>
+          <LeftContact>
+            <Form action="">
+              <Input
+                type="text"
+                placeholder="Your Name"
+                name="name"
+                value={formdata.name}
+                onChange={}
+              />
+              <Input
+                type="text"
+                placeholder="Your Email"
+                name="email"
+                value={formdata.email}
+                onChange={}
+              />
+              <Input
+                type="text"
+                placeholder="Your City"
+                name="city"
+                value={formdata.city}
+                onChange={}
+              />
+              <TextArea
+                name="message"
+                placeholder="Your message here"
+                value={formdata.message}
+                onChange={}
+              ></TextArea>
+              <Button type="submit">Submit Message</Button>
+            </Form>
+          </LeftContact>
+          <RightContact></RightContact>
+        </FormSection>
+      </MainContentSection>
     </>
   );
 };

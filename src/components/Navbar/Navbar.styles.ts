@@ -4,7 +4,7 @@ import { CiMail, CiHeadphones } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
-  width: 100%;
+  width: 100vw;
   height: 100px;
   display: flex;
   justify-content: space-between;
@@ -29,6 +29,7 @@ export const Left = styled.div`
   align-items: center;
   gap: 2rem;
   height: 100%;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     gap: 1rem;
@@ -39,6 +40,7 @@ export const Right = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
+  overflow-x: hidden;
 
   @media (max-width: 768px) {
     &.desktop-right {
@@ -68,6 +70,7 @@ export const Headingtwo = styled.div`
 export const Container = styled.div`
   display: flex;
   align-items: center;
+  overflow-x: hidden;
 `;
 
 export const TravelIcon = styled.svg`
@@ -99,7 +102,6 @@ export const Anchors = styled.div`
   gap: 2rem;
   height: 100%;
   align-items: center;
-
   @media (max-width: 992px) {
     gap: 1rem;
   }
@@ -208,6 +210,7 @@ export const MenuIcon = styled(GiHamburgerMenu)`
   display: none;
   font-size: 1.5rem;
   cursor: pointer;
+
   color: white;
 
   @media (max-width: 768px) {
