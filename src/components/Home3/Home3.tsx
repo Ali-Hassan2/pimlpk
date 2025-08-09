@@ -13,7 +13,6 @@ import {
   BoxesWrapper,
   LastSection,
   Report,
-  LastOne,
 } from "./Home3.styles";
 
 import gsap from "gsap";
@@ -126,7 +125,6 @@ const Home3 = () => {
       <LastSection>
         <Report>View All Services</Report>
       </LastSection>
-      <LastOne></LastOne>
     </HomeThreeSection>
   );
 };

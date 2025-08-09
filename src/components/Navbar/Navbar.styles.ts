@@ -131,7 +131,7 @@ export const Anchor = styled.a`
     bottom: -4px;
     width: 0%;
     height: 2px;
-    background-color: green;
+    background-color: #fd4a4a;
     transition: width 0.4s ease;
   }
 

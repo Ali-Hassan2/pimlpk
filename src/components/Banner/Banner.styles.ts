@@ -209,7 +209,6 @@ const Boxes = styled.div`
     height: auto;
     bottom: -20%;
     gap: 20px;
-    border: 3px solid yellow;
     font-size: 0.1vw;
   }
 
@@ -219,7 +218,6 @@ const Boxes = styled.div`
     width: 100%;
     gap: 15px;
     padding: 20px 0;
-    border: 3px solid yellow;
   }
 
   @media (max-width: 600px) {

@@ -168,16 +168,6 @@ const Report = styled.div`
   }
 `;
 
-const LastOne = styled.div`
-  width: 70%;
-  height: 200px;
-  background-color: #fd4a4a;
-  position: absolute;
-  left: 50%;
-  bottom: -155px;
-  transform: translate(-50%);
-`;
-
 export {
   HomeThreeSection,
   UpperBound,
@@ -187,5 +177,4 @@ export {
   MainHeading,
   LastSection,
   Report,
-  LastOne,
 };
