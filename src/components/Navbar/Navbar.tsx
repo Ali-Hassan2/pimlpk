@@ -1,7 +1,6 @@
 import React, { useRef, useState } from "react";
 import { CiMail, CiHeadphones } from "react-icons/ci";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { Link } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import {
