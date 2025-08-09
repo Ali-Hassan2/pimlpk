@@ -37,11 +37,19 @@ const ContactUs = () => {
     message: "",
   });
 
-  const handleChange = (e) => {};
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = e.target;
 
-  const handlesubmit = (e) => {};
+    setformdata((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
 
-  // name values
+  const handlesubmit = (e: React.FormEvent) => {};
+
   return (
     <>
       <Navbar {...NavbarProps} />
