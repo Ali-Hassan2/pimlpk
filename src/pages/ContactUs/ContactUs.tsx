@@ -36,6 +36,11 @@ const ContactUs = () => {
     city: "",
     message: "",
   });
+
+const handleChange = (e)=>{
+  
+}
+
   return (
     <>
       <Navbar {...NavbarProps} />
