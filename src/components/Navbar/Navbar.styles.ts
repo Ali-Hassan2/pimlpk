@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
-import { CiMail, CiHeadphones } from "react-icons/ci";
+// import { CiMail, CiHeadphones } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`

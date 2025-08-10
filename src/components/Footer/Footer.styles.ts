@@ -1,6 +1,5 @@
 import styled from "styled-components";
 const PRIMARY = "#fd4a4a";
-const SURFACE = "#fafafa";
 const BG = "#25252a";
 const TEXT = "#e6eef8";
 

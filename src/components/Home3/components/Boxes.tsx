@@ -1,8 +1,6 @@
-import React from "react";
-
 interface boxType {
   image: string;
-  logo: JSX.Element; // lowercase `logo`
+  Logo: JSX.Element;
   text: string;
 }
 
@@ -37,7 +35,7 @@ const Boxes = ({ boxinfo }: boxprops) => {
           borderBottomRightRadius: "10px",
         }}
       >
-        <div>{boxinfo.logo}</div>
+        <div>{boxinfo.Logo}</div>
         <p
           style={{
             fontSize: "1rem",

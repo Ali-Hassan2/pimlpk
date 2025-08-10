@@ -212,6 +212,5 @@ export {
   LeftPara,
   RightPara,
   Buttonn,
-  UpperPara,
   Span,
 };

@@ -1,5 +1,3 @@
-import React from "react";
-
 const NotFound = () => {
   return <div>There is nothing on this page</div>;
 };

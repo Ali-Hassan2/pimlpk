@@ -1,4 +1,3 @@
-import React from "react";
 import { Navbar, Banner, HomeTwo, Home3, Footer } from "../../components";
 import { PageWrapper } from "./Home.style";
 

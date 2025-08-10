@@ -1,7 +1,12 @@
-import React from "react";
 import { Navbar } from "../../components";
-import { ServicesSection, ServiceUpper, ServicesMid } from "./Services.styles";
+import {
+  ServicesSection,
+  ServiceUpper,
+  WhyChooseUs,
+  ServicesMid,
+} from "./Services.styles";
 import { GiCrossedAirFlows } from "react-icons/gi";
+import { useNavigate } from "react-router-dom";
 import Boxes from "./comps/Boxes";
 
 const NavbarProps = {
@@ -18,44 +23,45 @@ const NavbarProps = {
 interface boxtype {
   name: string;
   icon: JSX.Element;
-  descriptiom: string;
+  description: string;
   buttonText: string;
 }
 const Services = () => {
+  const navigate = useNavigate();
   const BoxData: boxtype[] = [
     {
       name: "Student Services",
-      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      icon: <GiCrossedAirFlows />,
       description: "We offer Student Services too",
       buttonText: "Submit Form",
     },
     {
-      name: "Student Services",
-      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      name: "Immigration Services ",
+      icon: <GiCrossedAirFlows />,
       description: "We offer Student Services too",
       buttonText: "Submit Form",
     },
     {
-      name: "Student Services",
-      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      name: "IELTS Preparation",
+      icon: <GiCrossedAirFlows />,
       description: "We offer Student Services too",
       buttonText: "Submit Form",
     },
     {
-      name: "Student Services",
-      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      name: "Travel & Ticketing",
+      icon: <GiCrossedAirFlows />,
       description: "We offer Student Services too",
       buttonText: "Submit Form",
     },
     {
-      name: "Student Services",
-      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      name: "Tour Packages",
+      icon: <GiCrossedAirFlows />,
       description: "We offer Student Services too",
       buttonText: "Submit Form",
     },
     {
-      name: "Student Services",
-      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      name: "Visa Consultancy",
+      icon: <GiCrossedAirFlows />,
       description: "We offer Student Services too",
       buttonText: "Submit Form",
     },
@@ -65,7 +71,14 @@ const Services = () => {
     <>
       <Navbar {...NavbarProps} />
       <ServicesSection>
-        <ServiceUpper>Services</ServiceUpper>
+        <ServicesSection>
+          <ServiceUpper>
+            <span>Services</span>
+            <span>
+              We Offer Services You Can Trust Helping You Every Step of the Way
+            </span>
+          </ServiceUpper>
+        </ServicesSection>
         <ServicesMid>
           {BoxData.map((bx, index) => (
             <div key={index}>
@@ -73,6 +86,12 @@ const Services = () => {
             </div>
           ))}
         </ServicesMid>
+        <WhyChooseUs>
+          Why Choose Us? We Provide Reliable and Trusted Services Tailored to
+          Your Needs.
+          <br />
+          <button onClick={() => navigate("/contactus")}>Contact Us</button>
+        </WhyChooseUs>
       </ServicesSection>
     </>
   );

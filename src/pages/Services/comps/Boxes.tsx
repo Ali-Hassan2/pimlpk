@@ -1,4 +1,4 @@
-import React from "react";
+import { BoxCard, IconWrapper } from "./Boxes.style";
 
 interface boxtype {
   name: string;
@@ -13,12 +13,12 @@ interface BoxProps {
 
 const Boxes = ({ box }: BoxProps) => {
   return (
-    <>
+    <BoxCard>
+      <IconWrapper>{box.icon}</IconWrapper>
       <h2>{box.name}</h2>
-      <h2>{box.icon}</h2>
-      <h2>{box.description}</h2>
-      <h2>{box.buttonText}</h2>
-    </>
+      <p>{box.description}</p>
+      <button>{box.buttonText}</button>
+    </BoxCard>
   );
 };
 

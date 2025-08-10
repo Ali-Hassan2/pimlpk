@@ -1,5 +1,5 @@
 // Footer.jsx
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   FooterSection,
   FooterContainer,
@@ -31,8 +31,8 @@ import {
 } from "react-icons/fa";
 
 const Footer = () => {
-  const [subscriberCount, setSubscriberCount] = useState(0);
-  const [subscribed, setSubscribed] = useState(false);
+  const [subscriberCount, setSubscriberCount] = useState<number>(0);
+  const [subscribed, setSubscribed] = useState<boolean>(false);
 
   useEffect(() => {
     const storedCount = localStorage.getItem("subscriberCount");
@@ -41,12 +41,12 @@ const Footer = () => {
     if (storedSubscribed === "true") setSubscribed(true);
   }, []);
 
-  const handleSubscribe = (e) => {
+  const handleSubscribe = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (!subscribed) {
       const newCount = subscriberCount + 1;
       setSubscriberCount(newCount);
-      localStorage.setItem("subscriberCount", newCount);
+      localStorage.setItem("subscriberCount", newCount.toString());
       setSubscribed(true);
       localStorage.setItem("subscribed", "true");
     }
