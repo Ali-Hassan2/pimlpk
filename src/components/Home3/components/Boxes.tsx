@@ -42,6 +42,7 @@ const Boxes = ({ boxinfo }: boxprops) => {
             fontFamily: "Mulish",
             margin: 0,
             color: "#333",
+            marginLeft: "15px",
           }}
         >
           {boxinfo.text}

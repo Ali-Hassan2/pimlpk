@@ -1,6 +1,7 @@
 import { useRef } from "react";
 import { GiCrossedAirFlows } from "react-icons/gi";
-import travel from "../../assets/travel.jpg";
+import travell from "../../assets/travell.jpg";
+import travelll from "../../assets/travelll.jpg";
 import Boxes from "./components/Boxes";
 import {
   HomeThreeSection,
@@ -77,12 +78,12 @@ const Home3 = () => {
 
   const BoxData: boxiType[] = [
     {
-      image: travel,
+      image: travell,
       Logo: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
       text: "MIGRATION SERVICES",
     },
     {
-      image: travel,
+      image: travelll,
       Logo: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
       text: "STUDENT SERVICES",
     },
