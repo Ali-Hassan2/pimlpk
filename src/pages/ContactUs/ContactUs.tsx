@@ -24,7 +24,7 @@ const NavbarProps = {
   An3: "About Us",
   An4: "Contact Us",
   email: "pimlgt5@outlook.com",
-  phone: "03212385555",
+  phone: "03000239023",
 };
 
 interface formtypes {

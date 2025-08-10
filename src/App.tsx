@@ -1,4 +1,5 @@
 import "./App.css";
+import FloatingWhatsApp from "./components/Float";
 import { Home, NotFound, Services, AboutUs, ContactUs } from "./pages";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
@@ -16,6 +17,7 @@ function App() {
     <div>
       <RouterProvider router={router} />
       <ToastContainer />
+      <FloatingWhatsApp />
     </div>
   );
 }

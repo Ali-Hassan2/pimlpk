@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import { GiHamburgerMenu } from "react-icons/gi";
-// import { CiMail, CiHeadphones } from "react-icons/ci";
 import { Link } from "react-router-dom";
 
 export const Nav = styled.nav`
@@ -14,7 +13,7 @@ export const Nav = styled.nav`
   box-shadow: 0px 0.3px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1000;
-  overflow:hidden;
+  overflow: hidden;
 
   @media (max-width: 992px) {
     padding: 0 1rem;
@@ -58,7 +57,7 @@ export const Headingtwo = styled.div`
   font-size: 1.5rem;
   color: white;
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
 
   @media (max-width: 992px) {
     font-size: 1.3rem;
@@ -73,7 +72,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   overflow-x: hidden;
-  overflow:hidden;
+  overflow: hidden;
 `;
 
 export const TravelIcon = styled.svg`
@@ -104,7 +103,7 @@ export const Anchors = styled.div`
   display: flex;
   gap: 2rem;
   height: 100%;
-  overflow:hidden;
+  overflow: hidden;
   align-items: center;
   @media (max-width: 992px) {
     gap: 1rem;
@@ -122,7 +121,7 @@ export const Anchor = styled(Link)`
   font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
-  overflow:hidden;
+  overflow: hidden;
   font-family: "Mulish", sans-serif;
   cursor: pointer;
   color: white;
@@ -183,6 +182,7 @@ export const Phone = styled.span`
   color: white;
   font-size: 0.9rem;
 
+  overflow: hidden;
   @media (max-width: 992px) {
     font-size: 0.8rem;
   }

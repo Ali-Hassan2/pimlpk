@@ -116,6 +116,10 @@ const Navbar = ({
               <CiHeadphones />
               {phone}
             </Phone>
+            <Phone>
+              <CiHeadphones />
+              03000239023
+            </Phone>
           </Info>
           <Button ref={buttonRef}>Request Call</Button>
         </Right>

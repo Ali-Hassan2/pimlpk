@@ -17,52 +17,81 @@ const NavbarProps = {
   An3: "About Us",
   An4: "Contact Us",
   email: "pimlgt5@outlook.com",
-  phone: "03212385555",
+  phone: "03000239013",
 };
 
 interface boxtype {
   name: string;
   icon: React.ReactNode;
-  description: string;
+  description?: string;
+  points?: string[];
   buttonText: string;
 }
+
 const Services = () => {
   const navigate = useNavigate();
   const BoxData: boxtype[] = [
     {
       name: "Student Services",
       icon: <GiCrossedAirFlows />,
-      description: "We offer Student Services too",
+      points: [
+        "Popular Courses",
+        "Educational Counselling Service",
+        "Admin Procedure",
+        "University/Country Selection",
+        "Visa Assistance",
+        "Application Procedure",
+        "Financial Advice",
+        "Pre-Departure Assistance",
+        "Airport Pick-Up & Accommodation",
+        "IELTS",
+      ],
       buttonText: "Submit Form",
     },
     {
-      name: "Immigration Services ",
+      name: "Immigration Services",
       icon: <GiCrossedAirFlows />,
-      description: "We offer Student Services too",
+      points: [
+        "Partner Visa",
+        "General Skilled Migration Visa",
+        "Post Study Work Visa",
+        "PR Visa Service",
+        "Business Visa Service",
+        "Skill Assessment",
+      ],
       buttonText: "Submit Form",
     },
     {
       name: "IELTS Preparation",
       icon: <GiCrossedAirFlows />,
-      description: "We offer Student Services too",
+      description: "We offer IELTS training with expert instructors.",
       buttonText: "Submit Form",
     },
     {
       name: "Travel & Ticketing",
       icon: <GiCrossedAirFlows />,
-      description: "We offer Student Services too",
+      description: "We arrange travel and ticketing for your journey.",
       buttonText: "Submit Form",
     },
     {
-      name: "Tour Packages",
+      name: "Destinations",
       icon: <GiCrossedAirFlows />,
-      description: "We offer Student Services too",
+      points: [
+        "Australia",
+        "Canada",
+        "New Zealand",
+        "UAE",
+        "United Kingdom",
+        "USA",
+        "Europe",
+        "Malaysia",
+      ],
       buttonText: "Submit Form",
     },
     {
       name: "Visa Consultancy",
       icon: <GiCrossedAirFlows />,
-      description: "We offer Student Services too",
+      description: "We provide visa consultancy for various countries.",
       buttonText: "Submit Form",
     },
   ];
@@ -71,14 +100,13 @@ const Services = () => {
     <>
       <Navbar {...NavbarProps} />
       <ServicesSection>
-        <ServicesSection>
-          <ServiceUpper>
-            <span>Services</span>
-            <span>
-              We Offer Services You Can Trust Helping You Every Step of the Way
-            </span>
-          </ServiceUpper>
-        </ServicesSection>
+        <ServiceUpper>
+          <span>Services</span>
+          <span>
+            We Offer Services You Can Trust Helping You Every Step of the Way
+          </span>
+        </ServiceUpper>
+
         <ServicesMid>
           {BoxData.map((bx, index) => (
             <div key={index}>
@@ -86,6 +114,7 @@ const Services = () => {
             </div>
           ))}
         </ServicesMid>
+
         <WhyChooseUs>
           Why Choose Us? We Provide Reliable and Trusted Services Tailored to
           Your Needs.
