@@ -29,6 +29,7 @@ const LeftSection = styled.div`
 const ImageContainer = styled.div`
   height: 800px;
   width: 900px;
+    overflow-y:hidden;
   @media (max-width: 768px) {
     width: 100%;
     height: auto;

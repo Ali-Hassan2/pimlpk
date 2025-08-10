@@ -38,7 +38,7 @@ const Right = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-
+  overflow-y: hidden;
   @media (max-width: 768px) {
     width: 100%;
     flex-direction: column;
@@ -72,7 +72,6 @@ const Upper = styled.div`
   display: flex;
   align-items: end;
   padding-left: 80px;
-  overflow-x: hidden;
 
   @media (max-width: 768px) {
     justify-content: center;
@@ -202,6 +201,7 @@ const Boxes = styled.div`
   align-items: center;
   bottom: -12%;
   gap: 30px;
+  margin-bottom: 50px;
 
   @media (max-width: 1200px) {
     flex-wrap: wrap;

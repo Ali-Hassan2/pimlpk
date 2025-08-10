@@ -61,7 +61,7 @@ const ServicesMid = styled.div`
   gap: 20px;
   padding: 40px;
   box-sizing: border-box;
-  margin-top: -500px;
+  margin-top: -800px;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -69,6 +69,7 @@ const ServicesMid = styled.div`
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
     padding: 20px;
+    margin-top: -800px;
   }
 `;
 export const WhyChooseUs = styled.div`

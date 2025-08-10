@@ -14,6 +14,7 @@ export const Nav = styled.nav`
   box-shadow: 0px 0.3px 15px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 1000;
+  overflow:hidden;
 
   @media (max-width: 992px) {
     padding: 0 1rem;
@@ -29,7 +30,7 @@ export const Left = styled.div`
   align-items: center;
   gap: 2rem;
   height: 100%;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     gap: 1rem;
@@ -40,7 +41,7 @@ export const Right = styled.div`
   display: flex;
   align-items: center;
   gap: 2rem;
-  overflow-x: hidden;
+  overflow: hidden;
 
   @media (max-width: 768px) {
     &.desktop-right {
@@ -57,6 +58,7 @@ export const Headingtwo = styled.div`
   font-size: 1.5rem;
   color: white;
   height: 100%;
+  overflow:hidden;
 
   @media (max-width: 992px) {
     font-size: 1.3rem;
@@ -71,6 +73,7 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   overflow-x: hidden;
+  overflow:hidden;
 `;
 
 export const TravelIcon = styled.svg`
@@ -101,6 +104,7 @@ export const Anchors = styled.div`
   display: flex;
   gap: 2rem;
   height: 100%;
+  overflow:hidden;
   align-items: center;
   @media (max-width: 992px) {
     gap: 1rem;
@@ -118,6 +122,7 @@ export const Anchor = styled(Link)`
   font-size: 1rem;
   text-decoration: none;
   font-weight: 500;
+  overflow:hidden;
   font-family: "Mulish", sans-serif;
   cursor: pointer;
   color: white;
