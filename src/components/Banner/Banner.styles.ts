@@ -54,7 +54,6 @@ const Left = styled.div`
   height: 100%;
   width: 50%;
   z-index: 2;
-  overflow-x: hidden;
 
   @media (max-width: 768px) {
     width: 100%;

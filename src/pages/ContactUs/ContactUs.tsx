@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { Navbar } from "../../components";
 import {
   MainContentSection,
@@ -10,8 +10,12 @@ import {
   TextArea,
   HeadingTwo,
   Button,
+  Image,
 } from "./ContactUs.styles";
 import { showToast } from "../../Utils";
+import contact from "../../assets/contact.jpg";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 const NavbarProps = {
   title: "pimlpk",
   spant: "Travels",
@@ -31,6 +35,31 @@ interface formtypes {
 }
 
 const ContactUs = () => {
+  const Rightanimation = useRef<HTMLDivElement>(null);
+  const Leftanimation = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    if (Leftanimation.current && Rightanimation.current) {
+      const tl = gsap.timeline({
+        defaults: { duration: 1, ease: "power3.out" },
+      });
+
+      tl.from(Leftanimation.current, {
+        x: -80,
+        opacity: 0,
+        scale: 0.95,
+      }).from(
+        Rightanimation.current,
+        {
+          x: 80,
+          opacity: 0,
+          scale: 0.95,
+        },
+        "-=0.7"
+      );
+    }
+  }, []);
+
   const [formdata, setformdata] = useState<formtypes>({
     name: "",
     email: "",
@@ -101,7 +130,7 @@ const ContactUs = () => {
           <span style={{ color: "#fd4a4a" }}>Contact</span> Us
         </HeadingTwo>
         <FormSection>
-          <LeftContact>
+          <LeftContact ref={Leftanimation}>
             <Form action="" onSubmit={handlesubmit}>
               <Input
                 type="text"
@@ -133,7 +162,9 @@ const ContactUs = () => {
               <Button type="submit">Submit Message</Button>
             </Form>
           </LeftContact>
-          <RightContact></RightContact>
+          <RightContact ref={Rightanimation}>
+            <Image src={contact}></Image>
+          </RightContact>
         </FormSection>
       </MainContentSection>
     </>
