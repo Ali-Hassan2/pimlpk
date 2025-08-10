@@ -61,7 +61,7 @@ const ServicesMid = styled.div`
   gap: 20px;
   padding: 40px;
   box-sizing: border-box;
-  margin-top: -750px;
+  margin-top: -500px;
   @media (max-width: 1024px) {
     grid-template-columns: repeat(2, 1fr);
   }
