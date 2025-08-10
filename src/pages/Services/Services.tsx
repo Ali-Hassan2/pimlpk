@@ -1,6 +1,8 @@
 import React from "react";
 import { Navbar } from "../../components";
 import { ServicesSection, ServiceUpper, ServicesMid } from "./Services.styles";
+import { GiCrossedAirFlows } from "react-icons/gi";
+import Boxes from "./comps/Boxes";
 
 const NavbarProps = {
   title: "pimlpk",
@@ -20,18 +22,57 @@ interface boxtype {
   buttonText: string;
 }
 const Services = () => {
-  const BoxData: boxtype[]=[
+  const BoxData: boxtype[] = [
     {
-      name:
-    }
-  ]
+      name: "Student Services",
+      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      description: "We offer Student Services too",
+      buttonText: "Submit Form",
+    },
+    {
+      name: "Student Services",
+      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      description: "We offer Student Services too",
+      buttonText: "Submit Form",
+    },
+    {
+      name: "Student Services",
+      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      description: "We offer Student Services too",
+      buttonText: "Submit Form",
+    },
+    {
+      name: "Student Services",
+      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      description: "We offer Student Services too",
+      buttonText: "Submit Form",
+    },
+    {
+      name: "Student Services",
+      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      description: "We offer Student Services too",
+      buttonText: "Submit Form",
+    },
+    {
+      name: "Student Services",
+      icon: <GiCrossedAirFlows size={40} style={{ color: "#fd4a4a" }} />,
+      description: "We offer Student Services too",
+      buttonText: "Submit Form",
+    },
+  ];
 
   return (
     <>
       <Navbar {...NavbarProps} />
       <ServicesSection>
         <ServiceUpper>Services</ServiceUpper>
-        <ServicesMid></ServicesMid>
+        <ServicesMid>
+          {BoxData.map((bx, index) => (
+            <div key={index}>
+              <Boxes box={bx} />
+            </div>
+          ))}
+        </ServicesMid>
       </ServicesSection>
     </>
   );
