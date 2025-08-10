@@ -16,7 +16,7 @@ const NavbarProps = {
   An2: "Services",
   An3: "About Us",
   An4: "Contact Us",
-  email: "ali@example.com",
+  email: "pimlgt5@outlook.com",
   phone: "03212385555",
 };
 
