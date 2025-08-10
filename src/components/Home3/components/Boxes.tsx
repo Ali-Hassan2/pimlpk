@@ -1,6 +1,6 @@
 interface boxType {
   image: string;
-  Logo: JSX.Element;
+  Logo: any;
   text: string;
 }
 

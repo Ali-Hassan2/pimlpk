@@ -22,7 +22,7 @@ const NavbarProps = {
 
 interface boxtype {
   name: string;
-  icon: JSX.Element;
+  icon: React.ReactNode;
   description: string;
   buttonText: string;
 }

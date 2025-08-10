@@ -22,7 +22,7 @@ import { useGSAP } from "@gsap/react";
 
 interface boxiType {
   image: string;
-  Logo: JSX.Element;
+  Logo: React.ReactNode;
   text: string;
 }
 

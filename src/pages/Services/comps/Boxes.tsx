@@ -2,7 +2,7 @@ import { BoxCard, IconWrapper } from "./Boxes.style";
 
 interface boxtype {
   name: string;
-  icon: JSX.Element;
+  icon: any;
   description: string;
   buttonText: string;
 }
