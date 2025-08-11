@@ -94,7 +94,7 @@ const Services = () => {
         "GERMENY",
         "FRANCE",
         "GREEK",
-        "HUNGRY",
+        "HUNGR",
         "SWEDEN",
         "CANADA",
       ],
