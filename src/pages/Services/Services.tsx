@@ -81,7 +81,7 @@ const Services = () => {
       buttonText: "Submit Form",
     },
     {
-      name: "Destinations", // Tour Packages replaced
+      name: "Destinations", 
       icon: <GiCrossedAirFlows />,
       points: [
         "UK",
@@ -94,7 +94,7 @@ const Services = () => {
         "GERMENY",
         "FRANCE",
         "GREEK",
-        "HUNGR",
+        "HUNGRY",
         "SWEDEN",
         "CANADA",
       ],
