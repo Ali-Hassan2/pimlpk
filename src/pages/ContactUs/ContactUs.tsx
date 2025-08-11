@@ -92,7 +92,7 @@ const ContactUs = () => {
     const timeout = setTimeout(() => controller.abort(), timer);
 
     try {
-      const baseUrl = "https://formspree.io/f/myzplkpw";
+      const baseUrl = "https://formspree.io/f/xjkojdak";
       const response = await fetch(baseUrl, {
         method: "POST",
         headers: {
