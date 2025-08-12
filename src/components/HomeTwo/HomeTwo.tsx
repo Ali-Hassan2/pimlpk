@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { GiCrossedAirFlows } from "react-icons/gi";
 import {
   HomeTwoSection,
   LeftSection,
@@ -107,7 +108,9 @@ const HomeTwo = () => {
       </LeftSection>
       <RightSection ref={rightref}>
         <RightUpper>
-          <UpperHeading>Logo About Us</UpperHeading>
+          <UpperHeading>
+            <GiCrossedAirFlows /> About Us
+          </UpperHeading>
           <MainHeading>We create and turn into reality</MainHeading>
         </RightUpper>
         <RightLower>
