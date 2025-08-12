@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import { FaStar } from "react-icons/fa";
 
 const colors = {
   red: "#fd4a4a",
@@ -51,6 +50,7 @@ export const StoriesGrid = styled.div`
   gap: 4rem;
   width: 80%;
   justify-items: center;
+  overflow: hidden;
 
   @media (max-width: 1200px) {
     gap: 3rem;
