@@ -130,7 +130,6 @@ export const BoxesWrapper = styled.div`
 const LastSection = styled.div`
   height: 100px;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   padding-bottom: 70px;
@@ -139,8 +138,6 @@ const LastSection = styled.div`
   cursor: pointer;
   font-size: 1rem;
   text-align: center;
-  position: relative;
-  z-index: 0;
   padding-top: 40px;
   @media (max-width: 768px) {
     height: auto;
@@ -154,11 +151,13 @@ const LastSection = styled.div`
     padding: 0.8rem;
   }
 `;
-
 const Report = styled.div`
+  color: black; /* ya koi dark color */
   transition: color 0.3s ease;
   position: relative;
-  z-index: 0;
+  padding: 8px 12px; /* thoda padding de do taake dikhe */
+  cursor: pointer;
+
   &:hover {
     color: #fd4a4a;
   }

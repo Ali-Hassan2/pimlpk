@@ -72,8 +72,8 @@ const Banner = () => {
           <Middle>
             <MainHeading ref={headingRef}>We make you travel</MainHeading>
             <SmallHeading ref={smallHeadingRef}>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Consequuntur ex officiis pariatur iure, sit et, ipsum sequi sint
+              Discover the world with us! At PIMLPK, we specialize in crafting
+              unforgettable travel experiences, offerings.
             </SmallHeading>
           </Middle>
 

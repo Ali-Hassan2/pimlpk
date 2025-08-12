@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { CiMail, CiHeadphones } from "react-icons/ci";
 // import { GiHamburgerMenu } from "react-icons/gi";
 import gsap from "gsap";
+import lok from "../../assets/lok.jpeg";
 import { useGSAP } from "@gsap/react";
 import {
   Nav,
@@ -75,16 +76,13 @@ const Navbar = ({
         <Left>
           <Headingtwo ref={headingRef}>
             <Container>
-              <TravelIcon viewBox="0 0 24 24">
-                <path
-                  fill="green"
-                  d="M12 2L15 8H9L12 2M2 22L22 22L12 13L2 22Z"
-                />
+              <TravelIcon>
+                <img src={lok} alt="" />
               </TravelIcon>
               <span style={{ color: "#eeeeee" }}>{title}</span>
             </Container>
             <span
-              style={{ color: "#894752", fontWeight: 400, marginLeft: "22px" }}
+              style={{ color: "#894752", fontWeight: 400, marginLeft: "8px" }}
             >
               {spant}
             </span>
@@ -118,7 +116,7 @@ const Navbar = ({
             </Phone>
             <Phone>
               <CiHeadphones />
-              03000239023
+              03000239013
             </Phone>
           </Info>
           <Button ref={buttonRef}>Request Call</Button>

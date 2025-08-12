@@ -116,6 +116,8 @@ const MainHeading = styled.h1`
   width: fit-content;
   font-weight: 200;
 
+  overflow: hidden;
+
   @media (max-width: 1200px) {
     font-size: 4.5vw;
   }
@@ -124,6 +126,7 @@ const MainHeading = styled.h1`
     position: static;
     font-size: 7vw;
     margin-top: 20px;
+    height: 50px;
   }
 
   @media (max-width: 480px) {

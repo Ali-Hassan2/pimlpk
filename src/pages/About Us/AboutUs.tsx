@@ -22,8 +22,8 @@ import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
 const NavbarProps = {
-  title: "pimlpk",
-  spant: "Travels",
+  title: "PIML",
+  spant: "CONSULTANTS",
   An1: "Home",
   An2: "Services",
   An3: "About Us",
@@ -93,7 +93,7 @@ const AboutUs = () => {
             Contact us now for a free consultation and take the first step
             towards your dreams.
           </EndSubtitle>
-          <ContactInfo>📧 ali@example.com | 📞 03212385555</ContactInfo>
+          <ContactInfo>📧 pimlgt5@outlook.com | 📞 03000239013</ContactInfo>
         </EndSection>
       </AboutSection>
     </>

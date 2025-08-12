@@ -1,10 +1,17 @@
-import { Navbar, Banner, HomeTwo, Home3, Footer } from "../../components";
+import {
+  Navbar,
+  Banner,
+  HomeTwo,
+  Home3,
+  Footer,
+  Success,
+} from "../../components";
 import { PageWrapper } from "./Home.style";
 
 const Home = () => {
   const NavbarProps = {
-    title: "pimlpk",
-    spant: "Travels",
+    title: "PIML",
+    spant: "CONSULTANTS",
     An1: "Home",
     An2: "Services",
     An3: "About Us",
@@ -20,6 +27,7 @@ const Home = () => {
         <Banner />
       </PageWrapper>
       <HomeTwo />
+      <Success />
       <Home3 />
       <Footer />
     </>

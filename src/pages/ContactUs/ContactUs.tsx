@@ -17,8 +17,8 @@ import contact from "../../assets/contact.jpg";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 const NavbarProps = {
-  title: "pimlpk",
-  spant: "Travels",
+  title: "PIML",
+  spant: "CONSULTANTS",
   An1: "Home",
   An2: "Services",
   An3: "About Us",

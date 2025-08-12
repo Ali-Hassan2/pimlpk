@@ -13,7 +13,7 @@ export const FooterSection = styled.footer`
 `;
 
 export const FooterContainer = styled.div`
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
 `;
 
@@ -42,22 +42,7 @@ export const Brand = styled.div`
   display: flex;
   gap: 1rem;
   align-items: center;
-  min-width: 240px;
-`;
-
-export const BrandLogo = styled.div`
-  width: 56px;
-  height: 56px;
-  border-radius: 12px;
-  display: grid;
-  place-items: center;
-  font-size: 1.6rem;
-  background: linear-gradient(
-    135deg,
-    rgba(255, 255, 255, 0.04),
-    rgba(255, 255, 255, 0.02)
-  );
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5);
+  min-width: 340px;
 `;
 
 export const BrandText = styled.div`
@@ -102,9 +87,7 @@ export const NavLink = styled.a`
   color: rgba(230, 238, 248, 0.9);
   text-decoration: none;
   font-size: 0.92rem;
-  transition:
-    color 180ms ease,
-    transform 180ms ease;
+  transition: color 180ms ease, transform 180ms ease;
   opacity: 0.9;
 
   &:hover {
@@ -157,9 +140,7 @@ export const SubscribeButton = styled.button`
   cursor: pointer;
   font-weight: 600;
   box-shadow: 0 8px 20px rgba(253, 74, 74, 0.18);
-  transition:
-    transform 150ms ease,
-    box-shadow 150ms ease;
+  transition: transform 150ms ease, box-shadow 150ms ease;
 
   &:hover {
     transform: translateY(-3px);
@@ -205,10 +186,7 @@ export const SocialButton = styled.a`
   color: ${TEXT};
   font-size: 0.95rem;
   text-decoration: none;
-  transition:
-    transform 160ms ease,
-    background 160ms ease,
-    box-shadow 160ms ease;
+  transition: transform 160ms ease, background 160ms ease, box-shadow 160ms ease;
 
   &:hover {
     transform: translateY(-4px);
@@ -217,8 +195,7 @@ export const SocialButton = styled.a`
       rgba(255, 255, 255, 0.02),
       rgba(255, 255, 255, 0.01)
     );
-    box-shadow:
-      0 10px 30px rgba(2, 6, 23, 0.6),
+    box-shadow: 0 10px 30px rgba(2, 6, 23, 0.6),
       0 6px 18px rgba(253, 74, 74, 0.12);
     color: ${PRIMARY};
   }

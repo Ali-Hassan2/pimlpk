@@ -3,6 +3,7 @@ import { GiCrossedAirFlows } from "react-icons/gi";
 import travell from "../../assets/travell.jpg";
 import travelll from "../../assets/travelll.jpg";
 import Boxes from "./components/Boxes";
+import { useNavigate } from "react-router-dom";
 import {
   HomeThreeSection,
   UpperBound,
@@ -28,6 +29,7 @@ interface boxiType {
 }
 
 const Home3 = () => {
+  const navigate = useNavigate();
   const leftanimation = useRef<HTMLDivElement>(null);
   const rightanimation = useRef<HTMLDivElement>(null);
   const boxanimation = useRef<HTMLDivElement[]>([]);
@@ -124,7 +126,13 @@ const Home3 = () => {
         ))}
       </MidBound>
       <LastSection>
-        <Report>View All Services</Report>
+        <Report
+          onClick={() => {
+            navigate("/services");
+          }}
+        >
+          View All Services
+        </Report>
       </LastSection>
     </HomeThreeSection>
   );

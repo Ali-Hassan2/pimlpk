@@ -13,8 +13,20 @@ interface BoxProps {
   box: boxtype;
 }
 
+const fallbackPoints = [
+  "Educational Counselling",
+  "Visa Guidance & Processing",
+  "Travel & Ticketing Assistance",
+  "Accommodation Arrangements",
+  "IELTS / PTE Preparation",
+  "Pre-Departure Orientation",
+];
+
 const Boxes = ({ box }: BoxProps) => {
   const [showDetails, setShowDetails] = useState(false);
+
+  const displayPoints =
+    box.points && box.points.length > 0 ? box.points : fallbackPoints;
 
   return (
     <BoxCard>
@@ -31,28 +43,52 @@ const Boxes = ({ box }: BoxProps) => {
       >
         {box.name}
       </h2>
-
-      {box.description && <p>{box.description}</p>}
-
-      {showDetails && box.points && (
-        <ul style={{ marginTop: "10px", paddingLeft: "20px" }}>
-          {box.points.map((point, idx) => (
-            <li key={idx} style={{ marginBottom: "5px" }}>
+      {box.description && (
+        <p style={{ textAlign: "center", color: "#555" }}>{box.description}</p>
+      )}
+      {showDetails && (
+        <ul
+          style={{
+            marginTop: "10px",
+            paddingLeft: "20px",
+            listStyle: "none",
+          }}
+        >
+          {displayPoints.map((point, idx) => (
+            <li
+              key={idx}
+              style={{
+                marginBottom: "8px",
+                padding: "6px 10px",
+                background: "#f9f9f9",
+                borderRadius: "6px",
+                transition: "all 0.3s ease",
+                cursor: "pointer",
+              }}
+              onMouseEnter={(e) => {
+                (e.target as HTMLLIElement).style.background = "#3498db";
+                (e.target as HTMLLIElement).style.color = "white";
+              }}
+              onMouseLeave={(e) => {
+                (e.target as HTMLLIElement).style.background = "#f9f9f9";
+                (e.target as HTMLLIElement).style.color = "#000";
+              }}
+            >
               {point}
             </li>
           ))}
         </ul>
       )}
-
       <button
         style={{
           marginTop: "10px",
-          backgroundColor: "#3498db",
+          backgroundColor: showDetails ? "#95a5a6" : "#3498db",
           color: "white",
           border: "none",
           padding: "8px 14px",
           borderRadius: "5px",
           cursor: "pointer",
+          transition: "all 0.3s ease",
         }}
         onClick={() => setShowDetails(!showDetails)}
       >
@@ -60,7 +96,6 @@ const Boxes = ({ box }: BoxProps) => {
       </button>
 
       <br />
-
       <button
         style={{
           marginTop: "8px",
@@ -70,7 +105,12 @@ const Boxes = ({ box }: BoxProps) => {
           padding: "8px 14px",
           borderRadius: "5px",
           cursor: "pointer",
+          transition: "background-color 0.3s ease",
         }}
+        onMouseEnter={(e) =>
+          (e.currentTarget.style.backgroundColor = "#c0392b")
+        }
+        onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = "red")}
       >
         {box.buttonText}
       </button>

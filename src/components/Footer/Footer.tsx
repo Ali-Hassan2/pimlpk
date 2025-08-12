@@ -5,7 +5,6 @@ import {
   FooterContainer,
   FooterTop,
   Brand,
-  BrandLogo,
   BrandText,
   NavGrid,
   NavColumn,
@@ -21,12 +20,13 @@ import {
   Copyright,
   Credits,
 } from "./Footer.styles";
+import ICEF from "../../assets/ICEF.jpeg";
+import { FaTiktok } from "react-icons/fa6";
 
 import {
   FaFacebookF,
   FaInstagram,
   FaEnvelope,
-  FaTwitter,
   FaLinkedinIn,
 } from "react-icons/fa";
 
@@ -57,9 +57,19 @@ const Footer = () => {
       <FooterContainer>
         <FooterTop>
           <Brand>
-            <BrandLogo aria-hidden>✈️</BrandLogo>
+            <img
+              src={ICEF}
+              alt="ICEF Logo"
+              style={{
+                width: "200px",
+                height: "160px",
+                borderRadius: "8px",
+                objectFit: "contain",
+                marginRight: "12px",
+              }}
+            />
             <div>
-              <BrandText>Pimplpk Travel Agency</BrandText>
+              <BrandText>PIML EDUCATION AND IMMIGRATION CONSULTANTS</BrandText>
               <div style={{ fontSize: "0.8rem", opacity: 0.8 }}>
                 Your gateway to unforgettable journeys
               </div>
@@ -69,9 +79,18 @@ const Footer = () => {
           <NavGrid>
             <NavColumn>
               <ColumnTitle>Destinations</ColumnTitle>
-              <NavLink href="#">Hungary</NavLink>
-              <NavLink href="#">Cyprus</NavLink>
-              <NavLink href="#">Australia</NavLink>
+              <NavLink href="#">UK</NavLink>
+              <NavLink href="#">USA</NavLink>
+              <NavLink href="#">AUSTRALIA</NavLink>
+              <NavLink href="#">FINNLAND</NavLink>
+              <NavLink href="#">CYPRUS</NavLink>
+              <NavLink href="#">BELGIUM</NavLink>
+              <NavLink href="#">GERMANY</NavLink>
+              <NavLink href="#">FRANCE</NavLink>
+              <NavLink href="#">GREEK</NavLink>
+              <NavLink href="#">HUNGARY</NavLink>
+              <NavLink href="#">SWEDEN</NavLink>
+              <NavLink href="#">CANADA</NavLink>
             </NavColumn>
 
             <NavColumn>
@@ -116,14 +135,26 @@ const Footer = () => {
 
         <FooterBottom>
           <SocialRow>
-            <SocialButton href="#" aria-label="Instagram">
+            <SocialButton
+              target="_blank"
+              href="https://www.instagram.com/piml_gujrat?igsh=dm12NTQybWozdjBs"
+              aria-label="Instagram"
+            >
               <FaInstagram />
             </SocialButton>
-            <SocialButton href="#" aria-label="Facebook">
+            <SocialButton
+              target="_blank"
+              href="https://www.facebook.com/share/1B2D9CnvJj/"
+              aria-label="Facebook"
+            >
               <FaFacebookF />
             </SocialButton>
-            <SocialButton href="#" aria-label="Twitter">
-              <FaTwitter />
+            <SocialButton
+              target="_blank"
+              href="https://www.tiktok.com/@pimlconsultants?_t=ZS-8yoKh5HWbx4&_r=1"
+              aria-label="TikTok"
+            >
+              <FaTiktok />
             </SocialButton>
             <SocialButton href="#" aria-label="LinkedIn">
               <FaLinkedinIn />
@@ -142,8 +173,8 @@ const Footer = () => {
             }}
           >
             <Copyright>
-              © {new Date().getFullYear()} Pimplpk Travel Agency. All rights
-              reserved.
+              © {new Date().getFullYear()} PIML EDUCATION AND IMMIGRATION
+              CONSULTANTS. All rights reserved.
             </Copyright>
             <Credits>Made in Gujrat</Credits>
           </div>

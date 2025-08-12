@@ -75,27 +75,24 @@ export const Container = styled.div`
   overflow: hidden;
 `;
 
-export const TravelIcon = styled.svg`
-  width: 24px;
-  height: 24px;
-  margin-right: 10px;
-  animation: fly 1.5s infinite ease-in-out;
+export const TravelIcon = styled.div`
+  width: 100px; /* bigger width */
+  height: 100px; /* bigger height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 
-  @keyframes fly {
-    0% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-5px);
-    }
-    100% {
-      transform: translateY(0px);
-    }
+  img {
+    width: 60%;
+    height: 60%;
+    object-fit: contain;
+    display: block;
   }
 
   @media (max-width: 768px) {
-    width: 20px;
-    height: 200px;
+    width: 80px;
+    height: 80px; /* keep it square and large */
   }
 `;
 
@@ -168,7 +165,7 @@ export const Email = styled.span`
   font-family: "Mulish", sans-serif;
   color: white;
   font-size: 0.9rem;
-
+  overflow: hidden;
   @media (max-width: 992px) {
     font-size: 0.8rem;
   }
@@ -180,6 +177,7 @@ export const Phone = styled.span`
   gap: 0.5rem;
   font-family: "Mulish", sans-serif;
   color: white;
+  overflow: hidden;
   font-size: 0.9rem;
 
   overflow: hidden;
